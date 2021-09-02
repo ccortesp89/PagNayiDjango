@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <title>Nayive Ananias</title>
+    {% load static %}
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" type="image/png" href="{% static 'core/favicon.ico' %}"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="{% static 'core/css/theme-8.css' %}">
+	
+	{% block style %}
+		
+	{% endblock style %}
+		
+    <!-- <link id="theme-style" rel="stylesheet" href="{% static 'core/css/templatemo-style.css' %}"> -->
+    
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a href="{% url 'home' %}">Nayive Ananías</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="{% static 'core/images/nayi.jpeg' %}" alt="image" >			
+					
+					<div class="bio mb-3">Periodista, Universidad Alberto Hurtado, Chile Dra. ©️ en Artes mención Música, Pontificia Universidad Católica de Chile.<br><a href="{% url 'about' %}">Descubre más sobre mí</a></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://www.instagram.com/criticamusicalfemenina/?utm_medium=copy_link" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-codepen fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				
+				
+				<ul class="navbar-nav flex-column text-left">
+					
+					{% block home %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'home' %}"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
+					</li>						
+					{% endblock home %}
+					
+					{% block entrevistas %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'entrevistas' %}"><i class="fas fa-bookmark fa-fw mr-2"></i>Entrevistas</a>
+					</li>						
+					{% endblock entrevistas %}
+					
+					{% block about %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'about' %}"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+					</li>						
+					{% endblock about %}
+					
+					{% block contact %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'contacto' %}"><i class="fas fa-envelope fa-fw mr-2"></i>Contact Me</a>
+					</li>
+					{% endblock contact %}
+									
+					
+				  </ul>
+				
+					
+				
+				<div class="my-2 my-md-3">
+				    <!-- <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/" target="_blank">Get in Touch</a> -->
+				</div>
+			</div>
+		</nav>
+    </header>   
+    
+	    
+    <div id="principal" class="main-wrapper">
+        
+        {% block contenido %}
+
+        {% endblock %}
+    </div>
+    
+    
+    
+    
+    
+
+    
+       
+    <!-- Javascript -->          
+    <script src="{% static 'core/plugins/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'core/plugins/popper.min.js' %}"></script> 
+    <script src="{% static 'core/plugins/bootstrap/js/bootstrap.min.js' %}"></script> 
+
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="{% static 'core/js/demo/style-switcher.js' %}"></script>     
+    
+
+</body>
+</html> 

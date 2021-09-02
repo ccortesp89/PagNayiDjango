@@ -1,0 +1,105 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block style %}
+    <!-- <link id="theme-style" rel="stylesheet" href="{% static 'core/css/templatemo-style.css' %}"> -->
+{% endblock style %}
+    
+
+{% block about %}
+  <li class="nav-item active">
+      <a class="nav-link" href="{% url 'about' %}"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+  </li>
+{% endblock about %}
+
+
+
+{% block contenido %}
+
+<article class="about-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col text-align">
+                <h2 class="title mb-3">Nayive Ananías</h2>
+
+                <p>Es Periodista y Magíster en Musicología Latinoamericana de la Universidad Alberto Hurtado, Chile. Ha trabajado en diversos medios de comunicación y en proyectos de investigación sobre música y género; en tres catastros de discos chilenos desarrollados por MusicaPopular.cl; y en el Répertoire International de Littérature Musicale (RILM). Entre 2016 y 2020 ha sido jurado de la categoría Mejor Publicación Musical de los Premios Pulsar de la Sociedad Chilena del Derecho de Autor (SCD). Actualmente, está culminando su tesis en el Doctorado en Artes mención Música de la Pontificia Universidad Católica de Chile. Sus líneas de investigación se vinculan a las músicas populares durante las dictaduras en el Cono Sur, a las escenas musicales queer/sexodisidentes, a las prácticas performáticas/performativas y al estudio de la crítica musical femenina, tanto en Brasil como en América Latina. </p>
+                <figure><img class="img-fluid" src="{% static 'core/images/nayi.jpeg' %}" alt="image" style="max-width: 50%; height: auto;"></figure>
+            </div>
+            <div class="col" >
+                <h2 class="title mb-3 " style="margin-left: 30px;">Entrevistas</h2>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-auto">
+
+                        <!-- <p>
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a>
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a>
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a>
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a>
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a>
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a>
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a>
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a>
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a>
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a>
+                        </p> -->
+                    </div>
+                </div>
+                <div id="post-591" class="post-591 page type-page status-publish hentry">
+
+                    <div class="parrafos">
+                        <p>
+                            
+                            {% for m in small %}
+                            
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img style="margin-top: 3px; margin-right: 3px; margin-bottom: 3px; margin-left: 3px;" title="{{m.artista}}" src="{{m.fotoSmall}}" alt="" width="105" height="105">
+                            </a>
+                            {% endfor %}
+                                
+                            <!-- <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a>
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a>
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a>
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a>
+                            <a href="https://melomaniacongenita.wordpress.com/2012/11/01/alan-wilder-depeche-mode/">
+                                <img title="Alan Wilder, ex Depeche Mode" src="https://melomaniacongenita.files.wordpress.com/2012/11/alan-wilder-20882165-1-402.jpg?w=105&amp;h=105" alt="" width="105" height="105">
+                            </a> -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</article><!--//about-section-->
+    
+{% endblock contenido %}
+    
