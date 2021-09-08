@@ -43,11 +43,11 @@
 					
 					<div class="bio mb-3">Periodista, Universidad Alberto Hurtado, Chile Dra. ©️ en Artes mención Música, Pontificia Universidad Católica de Chile.<br><a href="{% url 'about' %}">Descubre más sobre mí</a></div><!--//bio-->
 					<ul class="social-list list-inline py-3 mx-auto">
-			            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://twitter.com/nayive_ananias?lang=es" target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://cl.linkedin.com/in/nayive-ananias" target="_blank"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
 			            <li class="list-inline-item"><a href="https://www.instagram.com/criticamusicalfemenina/?utm_medium=copy_link" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-codepen fa-fw"></i></a></li>
+			            <!-- <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i></a></li> -->
+			            <!-- <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-codepen fa-fw"></i></a></li> -->
 			        </ul><!--//social-list-->
 			        <hr> 
 				</div><!--//profile-section-->
@@ -58,7 +58,7 @@
 					
 					{% block home %}
 					<li class="nav-item">
-						<a class="nav-link" href="{% url 'home' %}"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="{% url 'home' %}"><i class="fas fa-home fa-fw mr-2"></i>Inicio <span class="sr-only">(current)</span></a>
 					</li>						
 					{% endblock home %}
 					
@@ -70,13 +70,13 @@
 					
 					{% block about %}
 					<li class="nav-item">
-						<a class="nav-link" href="{% url 'about' %}"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+						<a class="nav-link" href="{% url 'about' %}"><i class="fas fa-user fa-fw mr-2"></i>Sobre mí</a>
 					</li>						
 					{% endblock about %}
 					
 					{% block contact %}
 					<li class="nav-item">
-						<a class="nav-link" href="{% url 'contacto' %}"><i class="fas fa-envelope fa-fw mr-2"></i>Contact Me</a>
+						<a class="nav-link" href="{% url 'contacto' %}"><i class="fas fa-envelope fa-fw mr-2"></i>Contacto</a>
 					</li>
 					{% endblock contact %}
 									
