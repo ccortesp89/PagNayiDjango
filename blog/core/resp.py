@@ -54,15 +54,21 @@ def env(foto):
     # print(y["access_token"])
     return y
 
-def correo(foto):
+def correo(correo, cuerpo, asunto, nombre):
 
     token = go()
-    u = foto
+    email = correo
+    body = cuerpo
+    subject = asunto
+    nombre = nombre
     url = "https://wise-bear-smx2er-dev-ed.my.salesforce.com/services/apexrest/create"
 
     payload=json.dumps({
         "tipo":"correo",
-        "url": u
+        "email": email,
+        "body": body,
+        "subject": subject,
+        "nombre": nombre
     })
     files=[
 
