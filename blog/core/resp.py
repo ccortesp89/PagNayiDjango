@@ -36,6 +36,32 @@ def env(foto):
     url = "https://wise-bear-smx2er-dev-ed.my.salesforce.com/services/apexrest/create"
 
     payload=json.dumps({
+        "tipo":"foto",
+        "url": u
+    })
+    files=[
+
+    ]
+    headers = {
+        'Authorization': 'Bearer '+token
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload, files=files)
+
+    #print(response.text)
+    x = response.text
+    y = json.loads(x)
+    # print(y["access_token"])
+    return y
+
+def correo(foto):
+
+    token = go()
+    u = foto
+    url = "https://wise-bear-smx2er-dev-ed.my.salesforce.com/services/apexrest/create"
+
+    payload=json.dumps({
+        "tipo":"correo",
         "url": u
     })
     files=[
